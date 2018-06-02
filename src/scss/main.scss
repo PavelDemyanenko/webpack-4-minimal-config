@@ -1,3 +1,16 @@
-div {
-  color: red;
+.b-main {
+  .b-main_section {
+    background-color: red;
+    height: 200px;
+    border-bottom: 2px solid blue;
+    overflow-y: scroll;
+    .b-main_section_block {
+      color: cyan;
+      padding: 15px;
+    }
+  }
+}
+body {
+  margin: 0;
+  padding: 0;
 }
