@@ -22,19 +22,19 @@ module.exports = {
     ]
   },
   plugins: [
-    new ExtractTextPlugin({filename: 'style.css'}),
+    new ExtractTextPlugin({filename: 'style.[chunkhash].css', disable: false, allChunks: true}),
     new HtmlWebpackPlugin({
       inject: false,
       hash: true,
       template: './src/index.html',
       filename: 'index.html'
-    })
+    }),
   ],
   resolve: {
     extensions: ['*', '.js']
   },
   output: {
-    filename: 'bundle.js',
+    filename: '[name].[chunkhash].js',
     path: path.resolve(__dirname, 'dist')
   },
   devServer: {
