@@ -19,14 +19,14 @@ module.exports = {
       },
       {
         test: /\.scss$/,
-        use:  [  'style-loader', MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader']
+        use:  [  'style-loader', MiniCssExtractPlugin.loader, 'css-loader', 'postcss-loader', 'sass-loader']
       }
     ]
   },
   plugins: [
     // new ExtractTextPlugin({filename: 'style.[chunkhash].css', disable: false, allChunks: true}),
     new MiniCssExtractPlugin({
-          filename: 'style.[contenthash].css',
+      filename: 'style.[contenthash].css',
     }),
     new HtmlWebpackPlugin({
       inject: false,
